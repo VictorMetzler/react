@@ -1,0 +1,13 @@
+body {
+  background-color: #444;
+  color: white;
+  text-align-last: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+}
