@@ -1,19 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+/*import App from "./App"; */
 import * as serviceWorker from "./serviceWorker";
+//import Clock from './components/clock/Clock';
+//import Toggle from './components/toggle/Toggle';
+//import Greeting from './components/greeting/Greeting';
+//import LoginControl from "./components/login/LoginControl";
+//import MailBox from "./components/mailbox/MailBox";
+//import WarningBanner from './components/warning/WarningBanner';
+import ListComponents from './components/listcomponents/ListComponents';
 
-const name = "John Peres";
-const element = <h1>Hello, {name}</h1>;
+//const messages = ['React', 'Re: React', 'Re:Re: React'];
+const numbers = [1, 2, 3, 4, 5];
 
 ReactDOM.render(
-  element,
-  /*   <React.StrictMode> 
-
-
-    <App />
-  </React.StrictMode> */ document.getElementById(
+  <ListComponents numbers={numbers}/>,
+  /* <LoginControl />
+     <WarningBanner />
+     <MailBox unreadMessages={messages} />
+     <Greeting isLoggedIn={false} />
+     <Toggle />
+     <Clock />
+  */ document.getElementById(
     "root"
   )
 );
