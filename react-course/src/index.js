@@ -9,20 +9,30 @@ import * as serviceWorker from "./serviceWorker";
 //import LoginControl from "./components/login/LoginControl";
 //import MailBox from "./components/mailbox/MailBox";
 //import WarningBanner from './components/warning/WarningBanner';
-import ListComponents from './components/listcomponents/ListComponents';
+//import ListComponents from './components/listcomponents/ListComponents';
+//import Blog from './components/blog/Blog';
+//import NameForm from './components/nameform/NameForm';
+import EasyForm from './components/easyform/EasyForm';
 
 //const messages = ['React', 'Re: React', 'Re:Re: React'];
-const numbers = [1, 2, 3, 4, 5];
+//const numbers = [1, 2, 3, 4, 5];
+/* const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+]; */
 
 ReactDOM.render(
-  <ListComponents numbers={numbers}/>,
-  /* <LoginControl />
+  <EasyForm />
+  /*<NameForm />
+  <Blog posts={posts} />
+  <ListComponents numbers={numbers}/>
+   <LoginControl />
      <WarningBanner />
      <MailBox unreadMessages={messages} />
      <Greeting isLoggedIn={false} />
      <Toggle />
      <Clock />
-  */ document.getElementById(
+  */, document.getElementById(
     "root"
   )
 );
