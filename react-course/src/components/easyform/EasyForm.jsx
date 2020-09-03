@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export default class extends React.Components {
+export default class extends React.Component {
   state = {
     value:
       "Por favor, escreva uma dissertação sobre o seu elemento DOM favorito.",
