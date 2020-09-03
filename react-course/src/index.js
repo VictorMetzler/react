@@ -12,7 +12,8 @@ import * as serviceWorker from "./serviceWorker";
 //import ListComponents from './components/listcomponents/ListComponents';
 //import Blog from './components/blog/Blog';
 //import NameForm from './components/nameform/NameForm';
-import EasyForm from './components/easyform/EasyForm';
+//import EasyForm from './components/easyform/EasyForm';
+import FlavorForm from './components/flavorform/FlavorForm';
 
 //const messages = ['React', 'Re: React', 'Re:Re: React'];
 //const numbers = [1, 2, 3, 4, 5];
@@ -22,8 +23,9 @@ import EasyForm from './components/easyform/EasyForm';
 ]; */
 
 ReactDOM.render(
-  <EasyForm />
-  /*<NameForm />
+  <FlavorForm />
+  /*<EasyForm />
+  <NameForm />
   <Blog posts={posts} />
   <ListComponents numbers={numbers}/>
    <LoginControl />
