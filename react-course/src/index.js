@@ -14,7 +14,9 @@ import * as serviceWorker from "./serviceWorker";
 //import NameForm from './components/nameform/NameForm';
 //import EasyForm from './components/easyform/EasyForm';
 //import FlavorForm from './components/flavorform/FlavorForm';
-import Reservation from './components/reservation/Reservation';
+//import Reservation from './components/reservation/Reservation';
+import Calculator from './components/calculator/Calculator';
+
 //const messages = ['React', 'Re: React', 'Re:Re: React'];
 //const numbers = [1, 2, 3, 4, 5];
 /* const posts = [
@@ -23,8 +25,9 @@ import Reservation from './components/reservation/Reservation';
 ]; */
 
 ReactDOM.render(
-  <Reservation />
+  <Calculator />
   /*
+  <Reservation />
   <FlavorForm />
   <EasyForm />
   <NameForm />

@@ -13,6 +13,11 @@ export default class extends React.Component {
        const name   = target.name;
 
        this.setState({[name]: value});
+       /*
+        var partialState = {};
+        partialState[name] = value;
+        this.setState(partialState);       
+       */
     }
 
     render() {
