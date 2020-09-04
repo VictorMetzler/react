@@ -2,12 +2,13 @@ import React from "react";
 import "./App.css";
 import HelloWorld from './components/HelloWorld';
 import CounterExample from './components/CounterExample';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      {/*<HelloWorld name="Jarond"/>*/}
-      <CounterExample />
+      <Header />
+      <HelloWorld name="Jarond"/>      
     </div>
   );
 }
