@@ -1,14 +1,14 @@
 import React from "react";
 import "./FilterableProductTable.css";
+import styled, { keyframes } from "styled-components";
+import { fadeIn, fadeInLeft } from "react-animations";
 
 class ProductCategoryRow extends React.Component {
   render() {
     const category = this.props.category;
     return (
       <tr>
-        <th colSpan="2">
-          {category}
-        </th>
+        <th colSpan="2">{category}</th>
       </tr>
     );
   }
@@ -16,17 +16,26 @@ class ProductCategoryRow extends React.Component {
 
 class ProductRow extends React.Component {
   render() {
+    const FadeInTD = styled.td`
+      animation: 2s ${keyframes`${fadeIn}`};
+    `;
+
+    const FadeInLeftTR = styled.tr`
+      animation: 2s ${keyframes`${fadeInLeft}`};
+    `;
+
     const product = this.props.product;
     const name = product.stocked ? (
       product.name
     ) : (
       <span style={{ color: "red" }}>{product.name}</span>
     );
+
     return (
-      <tr>
-        <td>{name}</td>
-        <td>{product.price}</td>
-      </tr>
+      <FadeInLeftTR>
+        <FadeInTD>{name}</FadeInTD>
+        <FadeInTD>{product.price}</FadeInTD>
+      </FadeInLeftTR>
     );
   }
 }
