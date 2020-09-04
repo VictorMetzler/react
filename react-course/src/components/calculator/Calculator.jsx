@@ -1,29 +1,38 @@
-import React from "react";
-
-function BoilingVerdict(props) {
-  if (props.celsius >= 100) {
-    return <p>A água ferveria.</p>;
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+    this.state = {temperature: '', scale: 'c'};
   }
-  return <p>A água não ferveria.</p>;
-}
 
-export default class extends React.Component {
-  state = {
-    temperature: ""
-  };
+  handleCelsiusChange(temperature) {
+    this.setState({scale: 'c', temperature});
+  }
 
-  handleChange = (e) => {
-    this.setState({ temperature: e.target.value });
-  };
+  handleFahrenheitChange(temperature) {
+    this.setState({scale: 'f', temperature});
+  }
 
   render() {
+    const scale = this.state.scale;
     const temperature = this.state.temperature;
+    const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+
     return (
-      <fieldset>
-        <legend>Informe a temperatura em Celsius:</legend>
-        <input value={temperature} onChange={this.handleChange} />
-        <BoilingVerdict celsius={parseFloat(temperature)} />
-      </fieldset>
+      <div>
+        <TemperatureInput
+          scale="c"
+          temperature={celsius}
+          onTemperatureChange={this.handleCelsiusChange} />
+        <TemperatureInput
+          scale="f"
+          temperature={fahrenheit}
+          onTemperatureChange={this.handleFahrenheitChange} />
+        <BoilingVerdict
+          celsius={parseFloat(celsius)} />
+      </div>
     );
   }
 }

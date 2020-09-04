@@ -15,7 +15,10 @@ import * as serviceWorker from "./serviceWorker";
 //import EasyForm from './components/easyform/EasyForm';
 //import FlavorForm from './components/flavorform/FlavorForm';
 //import Reservation from './components/reservation/Reservation';
-import Calculator from './components/calculator/Calculator';
+//import Calculator from './components/calculator/Calculator';
+//import TemperatureInput from './components/temperatureinput/TemperatureInput';
+//import Contencao from './components/contencao/Contencao';
+import FilterableProductTable from './components/products/FilterableProductTable';
 
 //const messages = ['React', 'Re: React', 'Re:Re: React'];
 //const numbers = [1, 2, 3, 4, 5];
@@ -24,9 +27,21 @@ import Calculator from './components/calculator/Calculator';
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 ]; */
 
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
+
 ReactDOM.render(
-  <Calculator />
+  <FilterableProductTable products={PRODUCTS} />  
   /*
+  <Contencao />
+  <TemperatureInput />  
+  <Calculator />
   <Reservation />
   <FlavorForm />
   <EasyForm />
