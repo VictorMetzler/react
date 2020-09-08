@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import HelloWorld from './components/HelloWorld';
 import CounterExample from './components/CounterExample';
 import Header from './components/Header';
