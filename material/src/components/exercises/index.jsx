@@ -1,20 +1,40 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import LeftPane from './LeftPane';
-import RightPane from './RightPane';
+import {
+  Grid,
+  Paper,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+} from "@material-ui/core";
 
 const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
 };
 
-export default (props) => {
+export default ({ exercises }) => {
   return (
     <Grid container>
       <Grid item sm>
-        <LeftPane styles={style} />
+        <Paper style={style.Paper}>
+          {exercises.map(([group, exercises]) => (
+            <React.Fragment>
+              <Typography variant="h5" style={{ textTransform: "capitalize" }}>
+                {group}
+              </Typography>
+              <List component="ul">
+                {exercises.map(({ title }) => (
+                  <ListItem button>
+                    <ListItemText primary={title} />
+                  </ListItem>
+                ))}
+              </List>
+            </React.Fragment>
+          ))}
+        </Paper>
       </Grid>
       <Grid item sm>
-        <RightPane styles={style} />
+        <Paper style={style.Paper}>Right Pane</Paper>
       </Grid>
     </Grid>
   );
