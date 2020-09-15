@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "node": "^14.10.1",
+    "stable": "^0.1.8"
   }
 }

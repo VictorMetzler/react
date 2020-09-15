@@ -10,17 +10,25 @@ const REST_COUNTRIES_API = `https://restcountries.eu/rest/v2/currency`;
 // Async/Await
 
 // Fetch data about currencies
-const getExchangeRate = async (fromCurrency, toCurrency) => {
-    const { data: { rates } } = await axios.get(FIXER_API);
-    
-    const euro = 1 / rates[fromCurrency];
-    const exchangeRate = euro * rates[toCurrency];
+    const getExchangeRate = async (fromCurrency, toCurrency) => {
+        const { data: { rates } } = await axios.get(FIXER_API);
+        
+        const euro = 1 / rates[fromCurrency];
+        const exchangeRate = euro * rates[toCurrency];
 
-    return exchangeRate;
-}
+        return exchangeRate;
+    }
 
-getExchangeRate('USB', 'EUR');
+    //getExchangeRate('USB', 'AUD');
 
 // Fetch data about countries
+
+    const getCountries = async (currencyCode) => {
+        const { data } = await axios.get(`${REST_COUNTRIES_API}/${currencyCode}`);
+        
+        return data.map((name) => name);
+    }
+
+    
 
 // Output data
