@@ -7,18 +7,15 @@ export default () => {
   const [Unidades, setUnidades] = useState([]);
 
   useEffect(() => {
-
     const fetchAPI = async () => {
-
       const objCall = {
         parMsgError: null,
         parResponse: null,
         parMethod: "GET",
-        parUrl: "/unidasdes",
+        parUrl: "/unidades",
       };
 
       if (await apiCall(objCall)) {
-
         //console.log(objCall.parResponse.message.unidades);
 
         objCall.parResponse.message.unidades = objCall.parResponse.message.unidades.sort(
@@ -34,10 +31,17 @@ export default () => {
         );
 
         setUnidades(objCall.parResponse.message.unidades);
+      } else {
+        alert(
+          objCall.parResponse.code +
+            " - " +
+            objCall.parResponse.message +
+            " " +
+            objCall.parResponse.debugmessage
+        );
       }
-
     };
-    
+
     fetchAPI();
   }, []);
 
