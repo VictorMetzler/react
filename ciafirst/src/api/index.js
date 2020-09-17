@@ -3,30 +3,38 @@ import axios from "axios";
 const API = {
   url: "https://api.ciaathletica.com.br/",
   version: "v2",
-  timeout: 5000
+  timeout: 5000,
 };
 
-export const fetchUnidades = async ({
-  parApiVersion = null,
-  parCodUnid = null,
-  parSortByKey = null,
-} = {}) => {
-  const urlApiVersion = parApiVersion ? parApiVersion : API.version;
-  const urlUnidades = parCodUnid
-    ? `${urlApiVersion}/unidades/${parCodUnid}`
-    : `${urlApiVersion}/unidades`;
+export const apiCall = async (objCall) => {
+  /*   objCall {
+    parMsgError = null,
+    parResponse = null,
+    parMethod = null,
+    parUrl = null,
+    parParams = null,
+    parData = null,
+    parApiVersion = null   
+  } */
 
+  if (!objCall.parUrl) {
+    return false;
+  }
 
-  const response = await axios({
+  let finalURL = objCall.parApiVersion ? objCall.parApiVersion : API.version;
+  finalURL =
+    finalURL + (objCall.parUrl.charAt(0) !== "/" ? "/" : "") + objCall.parUrl;
+
+  const axios_resp = await axios({
     //https://github.com/axios/axios
 
     // `method` is the request method to be used when making the request
-    method: "get",
+    method: objCall.parMethod ? objCall.parMethod : "GET",
 
     baseURL: API.url,
 
     // `url` is the server URL that will be used for the request
-    url: urlUnidades,
+    url: finalURL,
 
     // `timeout` specifies the number of milliseconds before the request times out.
     // If the request takes longer than `timeout`, the request will be aborted.
@@ -89,7 +97,7 @@ export const fetchUnidades = async ({
       console.log("Error", error.message);
     }
     console.log(error.config);
-    throw Error("Erro na obtenção dos dados das Unidades");
+    return false;
   });
   /*
       {
@@ -119,26 +127,15 @@ export const fetchUnidades = async ({
 
   const {
     data: {
-      response: {
-        message: { unidades },
-      },
+      response: { code, message, debugmessage },
     },
-  } = response;
+  } = axios_resp;
 
-  if (parSortByKey && unidades[0][parSortByKey] !== undefined) {
-    let novo = unidades.sort((a, b) => {
-      if (a[parSortByKey] > b[parSortByKey]) {
-        return 1;
-      }
-      if (a[parSortByKey] < b[parSortByKey]) {
-        return -1;
-      }
-      return 0;
-    });
-    //        console.log("Sort: " + novo);
-    return novo;
-  }
+  objCall.parResponse = {
+    code: code,
+    message: message,
+    debugmessage: debugmessage,
+  };
 
-  //      console.log("unSort: " + unidades);
-  return unidades;
+  return true;
 };
