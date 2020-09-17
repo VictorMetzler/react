@@ -4,6 +4,12 @@ const API = {
   url: "https://api.ciaathletica.com.br/",
   version: "v2",
   timeout: 5000,
+  defaultErrorMessage:
+    "Ops, ocorreu um erro, tente novamente mais tarde e caso não consiga, " +
+    "entre em contato com a recepção de sua Unidade.",
+  userAgent:
+    "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) " +
+    "Chrome/22.0.1216.0 Safari/537.2",
 };
 
 export const apiCall = async (objCall) => {
@@ -17,13 +23,21 @@ export const apiCall = async (objCall) => {
     parApiVersion = null   
   } */
 
-  if (!objCall.parUrl) {
+  if (
+    objCall.parMsgError === undefined ||
+    objCall.parResponse === undefined ||
+    objCall.parUrl === undefined
+  ) {
+    objCall.parMsgError = {
+      code: 500,
+      message: API.defaultErrorMessage,
+      debugmessage: "Server Error",
+    };
     return false;
   }
 
   let finalURL = objCall.parApiVersion ? objCall.parApiVersion : API.version;
-  finalURL =
-    finalURL + (objCall.parUrl.charAt(0) !== "/" ? "/" : "") + objCall.parUrl;
+  finalURL = finalURL + (objCall.parUrl.charAt(0) !== "/" ? "/" : "") + objCall.parUrl;
 
   const axios_resp = await axios({
     //https://github.com/axios/axios
@@ -58,6 +72,8 @@ export const apiCall = async (objCall) => {
 
     // `headers` are custom headers to be sent
     //headers: { 'cache-control': 'no-cache' },
+    //headers: { 'Pragma': 'no-cache'},
+    //headers: { "User-Agent": API.userAgent },
 
     // `responseEncoding` indicates encoding to use for decoding responses (Node.js only)
     // Note: Ignored for `responseType` of 'stream' or client-side requests
@@ -125,11 +141,7 @@ export const apiCall = async (objCall) => {
       }
     */
 
-  const {
-    data: {
-      response: { code, message, debugmessage },
-    },
-  } = axios_resp;
+  const {    data: {      response: { code, message, debugmessage },    },  } = axios_resp;
 
   objCall.parResponse = {
     code: code,

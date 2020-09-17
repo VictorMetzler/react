@@ -7,17 +7,18 @@ export default () => {
   const [Unidades, setUnidades] = useState([]);
 
   useEffect(() => {
+
     const fetchAPI = async () => {
+
       const objCall = {
         parMsgError: null,
-        parResponse: "oi",
+        parResponse: null,
         parMethod: "GET",
-        parUrl: "/unidades",
+        parUrl: "/unidasdes",
       };
 
-      const response = await apiCall(objCall);
+      if (await apiCall(objCall)) {
 
-      if (!objCall.parMsgError) {
         //console.log(objCall.parResponse.message.unidades);
 
         objCall.parResponse.message.unidades = objCall.parResponse.message.unidades.sort(
@@ -34,7 +35,9 @@ export default () => {
 
         setUnidades(objCall.parResponse.message.unidades);
       }
+
     };
+    
     fetchAPI();
   }, []);
 
