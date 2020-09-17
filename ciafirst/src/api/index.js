@@ -3,29 +3,19 @@ import axios from "axios";
 const API = {
   url: "https://api.ciaathletica.com.br/",
   version: "v2",
-  timeout: 5000,
+  timeout: 5000
 };
 
-// Obtem os dados das Unidades
-let fetchUnidades_cancelToken;
 export const fetchUnidades = async ({
   parApiVersion = null,
   parCodUnid = null,
   parSortByKey = null,
 } = {}) => {
-  //Check if there are any previous pending requests
-  if (typeof fetchUnidades_cancelToken != typeof undefined) {
-    fetchUnidades_cancelToken.cancel();
-    console.log("cancelado");
-  }
-
-  //Save the cancel token for the current request
-  //fetchUnidades_cancelToken = axios.CancelToken.source();
-
   const urlApiVersion = parApiVersion ? parApiVersion : API.version;
   const urlUnidades = parCodUnid
     ? `${urlApiVersion}/unidades/${parCodUnid}`
     : `${urlApiVersion}/unidades`;
+
 
   const response = await axios({
     //https://github.com/axios/axios
@@ -101,7 +91,6 @@ export const fetchUnidades = async ({
     console.log(error.config);
     throw Error("Erro na obtenção dos dados das Unidades");
   });
-
   /*
       {
         // `data` is the response that was provided by the server
