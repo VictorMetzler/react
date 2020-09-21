@@ -3,7 +3,7 @@ import axios from "axios";
 const API = {
   url: "https://api.ciaathletica.com.br/",
   version: "v2",
-  timeout: 5000,
+  timeout: 8000,
   defaultErrorMessage:
     "Ops, ocorreu um erro, tente novamente mais tarde e caso não consiga, " +
     "entre em contato com a recepção de sua Unidade.",

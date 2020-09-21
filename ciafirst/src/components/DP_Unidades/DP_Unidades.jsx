@@ -7,7 +7,7 @@ export default () => {
   const [Unidades, setUnidades] = useState([]);
 
   useEffect(() => {
-    const fetchAPI = async () => {
+    const fetchUnidades = async () => {
       const objCall = {
         parMsgError: null,
         parResponse: null,
@@ -42,7 +42,7 @@ export default () => {
       }
     };
 
-    fetchAPI();
+    fetchUnidades();
   }, []);
 
   return (

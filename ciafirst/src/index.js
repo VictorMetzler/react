@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Unidades from './components/DP_Unidades/DP_Unidades';
+import React from "react";
+import ReactDOM from "react-dom";
+import "normalize.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Unidades />
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
