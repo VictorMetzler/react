@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;    
+}
+
+.nav-items li {
+    padding: 10px;
+}
+
+.nav-logo {
+    width: 60px;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgray;
+    color: azure;
+    font-size: 1.4em;
+    padding: 10px;
+}
