@@ -50,9 +50,62 @@ const App = () => {
     "Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients.",
   ];
 
+  const [allSelected, setAllSelected] = useState([]);
   const [selected, setSelected] = useState(0);
 
-  return <div>{anecdotes[selected]}</div>;
+  const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+  const getNextNumber = () => {
+    let number = randomIntFromInterval(0, anecdotes.length - 1);
+
+    const anecdoteAppered = () => {
+      for (let i = 0; i < allSelected.length; i++) {
+        if (allSelected[i] === number) {
+          return true;
+        }
+      }
+
+      return false;
+    };
+
+    while (anecdoteAppered() === true) {
+      number = randomIntFromInterval(0, anecdotes.length - 1);
+    }
+
+    setSelected(number);
+    setAllSelected(allSelected.concat(number));
+
+    return number;
+  };
+
+  const showNextAnecdote = () => {
+    getNextNumber();
+
+    if (allSelected.length === anecdotes.length) {
+      document.getElementById("btnNextAnecdote").setAttribute("disabled", true);
+    }
+
+    let div = document.createElement("p");
+    div.textContent = anecdotes[selected];
+
+    document.getElementById("anecdotes").appendChild(div);
+  };
+
+  return (
+    <>
+      <div id="anecdotes"></div>
+      <button
+        id="btnNextAnecdote"
+        onClick={() => {
+          showNextAnecdote();
+        }}
+      >
+        next anecdote
+      </button>
+    </>
+  );
 };
 
 export default App;
