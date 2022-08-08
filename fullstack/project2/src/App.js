@@ -19,9 +19,11 @@ const Statistics = ({ good, neutral, bad, sum, all }) => {
   } else {
     return (
       <table border="1" style={{ width: "300px" }}>
-        <tr>
-          <th colspan="2">statistics</th>
-        </tr>
+        <thead>
+          <tr>
+            <th colSpan={2}>statistics</th>
+          </tr>
+        </thead>
         <tbody>
           <StatisticsLine text="Good" value={good} />
           <StatisticsLine text="Neutral" value={neutral} />
