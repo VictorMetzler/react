@@ -1,0 +1,23 @@
+
+
+	Node.js:
+
+		https://nodejs.org/en/download
+
+		node -v mostra a versão instalada
+
+	Visual Studio Code
+	
+		Embaixo a esquerda, ícone "Contas", fazer login no Github para carregar as configurações da IDE salvas
+
+		Shift + Alt + F  formata com Pretier
+
+		ctrl + ' para abrir o terminal
+
+	Git for windows
+		
+		https://git-scm.com/
+
+	GitHub Desktop
+	
+		

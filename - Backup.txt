@@ -1,0 +1,289 @@
+
+npm install react-scripts --save
+
+	map - quando se quer percorrer, algo simples
+	
+		O método map() invoca a função callback passada por argumento para cada elemento
+		do Array e devolve um novo Array como resultado.
+		
+		var numbers = [1, 4, 9];
+		var doubles = numbers.map(function(currentValue) { return currentValue * 2; });
+		// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
+
+	reduce - quando se quer interagir entre os valores do array
+	
+		O método reduce() executa uma função reducer (fornecida por você) para cada elemento
+		do array, resultando num único valor de retorno.
+
+		const array1 = [1, 2, 3, 4];
+
+		// 0 + 1 + 2 + 3 + 4
+		const initialValue = 0;
+		const sumWithInitial = array1.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
+		
+	filter - quando se quer filtrar, incluir critérios, etc.
+	
+		O método filter() cria um novo array com todos os elementos que passaram no teste
+		implementado pela função fornecida.
+
+		function checkAdult(age) {
+		  return age >= 18;
+		}		
+
+		const ages = [32, 33, 16, 40];
+		const result = ages.filter(checkAdult);
+
+
+When you use console.log for debugging, don't combine objects
+in a Java-like fashion by using the plus operator. Instead of writing:
+
+	console.log('props value is ' + props)
+	Separate the things you want to log to the console with a comma:
+	console.log('props value is', props)
+
+	If you use the Java-like way of concatenating a string with an object,
+	you will end up with a rather uninformative log message:
+
+	props value is [Object object]
+
+Whereas the items separated by a comma will all be available in the
+browser console for further inspection.
+
+Logging to the console is by no means the only way of debugging our applications.
+You can pause the execution of your application code in the Chrome developer console's
+debugger, by writing the command debugger anywhere in your code.
+
+The execution will pause once it arrives at a point where the debugger command gets executed.
+The debugger also enables us to execute our code line by line with the controls found on the
+right-hand side of the Sources tab.
+
+You can also access the debugger without the debugger command by adding breakpoints in the
+Sources tab. Inspecting the values of the component's variables can be done in the Scope-section
+
+It is highly recommended to add the React developer tools extension to Chrome. It adds a new
+Components tab to the developer tools. The new developer tools tab can be used to inspect
+the different React elements in the application, along with their state and props:
+
+Dev tools shows the state of hooks in the order of their definition.
+
+
+Instalar:
+	
+	Visual Studio,
+	   caso o acima não instale, também baixar o NodeJS que instala o NPM junto
+	GIT for windows
+
+Visual Studio	
+	
+	Em baixo a esquerda, ícone "Contas", fazer login para carregar as configurações salvas.
+	
+	Tem um ícone em baixo a esquerda do react Git, logar conta e clocar a pasta react.
+	
+	Shift + Alt + F  formata com Pretier	
+
+	ctrl + ' para abrir o terminal:
+
+	npx create-react-app my-project --use-npm
+	 or create-react-app ./  se já estiver na pasta com o nome do app
+		webpack - a file bundler
+		webpack Dev Server - a development sever
+		Babel - a transpiler (Source-to-source compiler) - jsx
+		Several polyfills
+		ESLint - A linter (Find and fix problems in your JavaScript code)
+		Jest - The React testing library
+		
+		arrow function () => {} garante o this, utilizar na construção não na chamada
+
+	npm start - open in http://localhost:3000/	
+	
+		se der: "start": "react-scripts start"
+		substirui isso: "start": "react-scripts start",
+		por isso: "start": "react-scripts --openssl-legacy-provider start",
+	
+	npm run build - create a minified bundle to deploy to production
+
+React -> is a View Library
+
+	Quando em Classe possui oncomponentdidmount, etc... em funçao não há hooks, então, 
+	utiliza-se useEffect para fazer hooks ( funciona sempre quando faz um render() )
+
+	react-animations
+	npm install react-animations --save
+	https://animate.style/
+	
+	styled-components lets you write actual CSS in your JavaScript
+	npm install styled-components --save
+	https://styled-components.com/
+
+	props
+	
+	State ( any data that can change - useState <-> setState )
+		* não utilizar class ... constructor(props) { super(props_ ... isso é velho
+		utilizar State Hook -> const [count, setCount] = useState(0)
+		
+		O único lugar onde você pode atribuir this.state é o construtor.
+		
+		setState via objeto  -> this.setState({ this.state.count = 0 });
+		setState via funcção -> this.setState((state, props) => ({ counter: state.counter + props.increment });
+	
+	Os Dados Fluem para Baixo
+	Isso é comumente chamado de fluxo de dados “top-down” ou “unidirecional”
+
+	JSX (Javascript XML)
+		Como JSX é mais próximo de JavaScript que do HTML, o React DOM usa camelCase como convenção para nomes
+		de propriedades ao invés dos nomes de atributos do HTML.
+
+		Por exemplo, class se transforma em className em JSX, e tabindex se transforma em tabIndex.	
+	
+	Componentes
+	
+		Sempre inicie os nomes dos componentes com uma letra maiúscula.
+
+		O React trata componentes começando com letras minúsculas como tags do DOM. Por exemplo, <div /> representa
+		uma tag div do HTML, mas <Welcome /> representa um componente e requer que Welcome esteja no escopo.
+		
+	Métodos de ciclo de vida
+	
+	    componentDidMount()
+			O método componentDidMount() é executado depois que a saída do componente é renderizada no DOM
+		componentWillUnmount()
+		
+	Programação e Organização:
+
+		pastas:
+			public
+			  index.html				
+			src
+			  components
+			  images
+			  App.js
+			  index.js
+
+		import React, { Component }, { useState } from 'react';
+		import ReactDOM from 'react-dom/client';
+		import App from './App';
+		impoart './App.css';     ->    desta forma importa tudo de dentro
+		import { CssBaseline } from '@material-ui/core';
+import Translate from "./components/translate";
+import Languages from "./components/languages";
+
+		ReactDom.createRoot(getElementById('roo').render(
+			<React.StrictMode>
+				<CssBaseline />
+				<App />
+			</React.StrictMode>
+		);
+
+		css class = className
+
+		const function NomeDoComponente() {
+			return()
+		}
+		
+		Spread syntax (...) -> allows an iterable such as an array expression
+		or string to be expanded in places where zero or more arguments (for function calls) or
+    	elements (for array literals) are expected, or an object expression to be expanded in places
+    	where zero or more key-value pairs (for object literals) are expected.
+		
+		array.concat(valor):
+		
+			cria um novo array e adiciona um novo valor para ele no final
+			
+		array.join(separador)
+
+			adds all the elements of an array into a string, separated by the specified separator string
+
+		Destructuring Assignment
+		
+			const { onClick, text } = props
+			var [firstName,,thirdName] = ["alpha", "beta", "gamma", "delta"];
+			var [firstName,,...lastName] = ["alpha", "beta", "gamma", "delta"];
+			[x, y, ...restof] = [10, 20, 30, 40, 50];
+
+		Hooks and Effect
+		
+			The useState function as well as the useEffect function must
+			not be called from inside of a loop, a conditional expression, or any place that is not a function
+    		defining a component. This must be done to ensure that the hooks are always called in the same order,
+			and if this isn't the case the application will behave erratically.
+
+			To recap, hooks may only be called from the inside of a function body that defines a React component.
+			
+			const App = () => {
+			  // these are ok
+			  const [age, setAge] = useState(0)
+			  const [name, setName] = useState('Juha Tauriainen')
+
+			  if ( age > 10 ) {
+				// this does not work!
+				const [foobar, setFoobar] = useState(null)
+			  }
+
+			  for ( let i = 0; i < age; i++ ) {
+				// also this is not good
+				const [rightWay, setRightWay] = useState(false)
+			  }
+
+			  const notGood = () => {
+				// and this is also illegal
+				const [x, setX] = useState(-1000)
+			  }
+
+			  return (
+				//...
+			  )
+			}			
+			
+		Event handlers with function that return function
+
+			const hello = (who) => () => {
+			  console.log('hello', who)
+			}		
+
+		Do Not Define Components Within Components
+		
+			The biggest problems are due to the fact that React treats a component defined inside of another component
+			as a new component in every render. This makes it impossible for React to optimize the component.		
+
+		Do not user Index as a key on any list of items
+		
+			A key is the only thing React uses to identify DOM elements. What happens if you push an item to the list
+   		    or remove something in the middle? If the key is same as before React assumes that the DOM element represents
+			the same component as before. But that is no longer true.
+		
+			todos.map((todo, index) => (<Todo {...todo} key={index} />));
+			
+			1 the list and items are static–they are not computed and do not change;
+			2 the items in the list have no ids;
+			3 the list is never reordered or filtered.
+			When all of them are met, you may safely use the index as a key.
+			
+			More safe way:
+
+			import { useId } from 'react';
+			
+			const Component = () => {
+			  // outside callback
+			  const id = useId();
+
+			  return array.map((item, index) => <div key={`${id}-${index}`}>some content</div>
+			}			
+
+
+Material UI
+
+	import { CssBaseline } from '@material-ui/core';
+	<CssBaseline />
+	<App />
+	
+	Incluir ou não ?? shrink-to-fit=no ??
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+	Thema -> ThemeProvider, createMuiTheme
+	
+	Styles -> makeStyles
+
+	Icons -> npm install @material-ui/icons	
+	
