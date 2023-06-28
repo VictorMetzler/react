@@ -1,0 +1,147 @@
+
+	React -> is a View Library
+
+		Quando em Classe possui oncomponentdidmount, etc... em funçao não há hooks, então, 
+		utiliza-se useEffect para fazer hooks ( funciona sempre quando faz um render() )
+
+		react-animations
+		npm install react-animations --save
+		https://animate.style/
+		
+		styled-components lets you write actual CSS in your JavaScript
+		npm install styled-components --save
+		https://styled-components.com/
+
+		props
+		
+		State ( any data that can change - useState <-> setState )
+			* não utilizar class ... constructor(props) { super(props_ ... isso é velho
+			utilizar State Hook -> const [count, setCount] = useState(0)
+			
+			O único lugar onde você pode atribuir this.state é o construtor.
+			
+			setState via objeto  -> this.setState({ this.state.count = 0 });
+			setState via funcção -> this.setState((state, props) => ({ counter: state.counter + props.increment });
+		
+		Os Dados Fluem para Baixo
+		Isso é comumente chamado de fluxo de dados “top-down” ou “unidirecional”
+
+		JSX (Javascript XML)
+			Como JSX é mais próximo de JavaScript que do HTML, o React DOM usa camelCase como convenção para nomes
+			de propriedades ao invés dos nomes de atributos do HTML.
+
+			Por exemplo, class se transforma em className em JSX, e tabindex se transforma em tabIndex.	
+		
+		Componentes
+		
+			Sempre inicie os nomes dos componentes com uma letra maiúscula.
+
+			O React trata componentes começando com letras minúsculas como tags do DOM. Por exemplo, <div /> representa
+			uma tag div do HTML, mas <Welcome /> representa um componente e requer que Welcome esteja no escopo.
+			
+		Métodos de ciclo de vida
+		
+			componentDidMount()
+				O método componentDidMount() é executado depois que a saída do componente é renderizada no DOM
+			componentWillUnmount()
+			
+		Programação e Organização:
+
+			pastas:
+				public
+				  index.html				
+				src
+				  components
+				  images
+				  App.js
+				  index.js
+
+			import React, { Component }, { useState } from 'react';
+			import ReactDOM from 'react-dom/client';
+			import App from './App';
+			impoart './App.css';     ->    desta forma importa tudo de dentro
+			import { CssBaseline } from '@material-ui/core';
+			import Translate from "./components/translate";
+			import Languages from "./components/languages";
+
+			ReactDom.createRoot(getElementById('roo').render(
+				<React.StrictMode>
+					<CssBaseline />
+					<App />
+				</React.StrictMode>
+			);
+
+			css class = className
+
+			const function NomeDoComponente() {
+				return()
+			}
+			
+			Hooks and Effect
+			
+				The useState function as well as the useEffect function must
+				not be called from inside of a loop, a conditional expression, or any place that is not a function
+				defining a component. This must be done to ensure that the hooks are always called in the same order,
+				and if this isn't the case the application will behave erratically.
+
+				To recap, hooks may only be called from the inside of a function body that defines a React component.
+				
+				const App = () => {
+				  // these are ok
+				  const [age, setAge] = useState(0)
+				  const [name, setName] = useState('Juha Tauriainen')
+
+				  if ( age > 10 ) {
+					// this does not work!
+					const [foobar, setFoobar] = useState(null)
+				  }
+
+				  for ( let i = 0; i < age; i++ ) {
+					// also this is not good
+					const [rightWay, setRightWay] = useState(false)
+				  }
+
+				  const notGood = () => {
+					// and this is also illegal
+					const [x, setX] = useState(-1000)
+				  }
+
+				  return (
+					//...
+				  )
+				}			
+				
+			Event handlers with function that return function
+
+				const hello = (who) => () => {
+				  console.log('hello', who)
+				}		
+
+			Do Not Define Components Within Components
+			
+				The biggest problems are due to the fact that React treats a component defined inside of another component
+				as a new component in every render. This makes it impossible for React to optimize the component.		
+
+			Do not user Index as a key on any list of items
+			
+				A key is the only thing React uses to identify DOM elements. What happens if you push an item to the list
+				or remove something in the middle? If the key is same as before React assumes that the DOM element represents
+				the same component as before. But that is no longer true.
+			
+				todos.map((todo, index) => (<Todo {...todo} key={index} />));
+				
+				1 the list and items are static–they are not computed and do not change;
+				2 the items in the list have no ids;
+				3 the list is never reordered or filtered.
+				When all of them are met, you may safely use the index as a key.
+				
+				More safe way:
+
+				import { useId } from 'react';
+				
+				const Component = () => {
+				  // outside callback
+				  const id = useId();
+
+				  return array.map((item, index) => <div key={`${id}-${index}`}>some content</div>
+				}	

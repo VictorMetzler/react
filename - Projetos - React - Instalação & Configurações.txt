@@ -18,6 +18,8 @@
 		
 		https://git-scm.com/
 
-	GitHub Desktop
+	Se quiser uma IDE para gerenciar os Respositórios do GitHub:
+
+		GitHub Desktop
 	
 		

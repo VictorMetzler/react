@@ -1,0 +1,22 @@
+
+	Javascript
+
+		Spread syntax (...) -> allows an iterable such as an array expression
+		or string to be expanded in places where zero or more arguments (for function calls) or
+		elements (for array literals) are expected, or an object expression to be expanded in places
+		where zero or more key-value pairs (for object literals) are expected.
+		
+		array.concat(valor):
+		
+			cria um novo array e adiciona um novo valor para ele no final
+			
+		array.join(separador)
+
+			adds all the elements of an array into a string, separated by the specified separator string
+
+		Destructuring Assignment
+		
+			const { onClick, text } = props
+			var [firstName,,thirdName] = ["alpha", "beta", "gamma", "delta"];
+			var [firstName,,...lastName] = ["alpha", "beta", "gamma", "delta"];
+			[x, y, ...restof] = [10, 20, 30, 40, 50];
