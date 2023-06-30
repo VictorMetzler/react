@@ -1,9 +1,6 @@
 
 	React -> is a View Library
 
-		Quando em Classe possui oncomponentdidmount, etc... em funçao não há hooks, então, 
-		utiliza-se useEffect para fazer hooks ( funciona sempre quando faz um render() )
-
 		react-animations
 		npm install react-animations --save
 		https://animate.style/
@@ -22,7 +19,7 @@
 			
 			setState via objeto  -> this.setState({ this.state.count = 0 });
 			setState via funcção -> this.setState((state, props) => ({ counter: state.counter + props.increment });
-		
+
 		Os Dados Fluem para Baixo
 		Isso é comumente chamado de fluxo de dados “top-down” ou “unidirecional”
 
@@ -38,6 +35,22 @@
 
 			O React trata componentes começando com letras minúsculas como tags do DOM. Por exemplo, <div /> representa
 			uma tag div do HTML, mas <Welcome /> representa um componente e requer que Welcome esteja no escopo.
+			
+				const NomeDoComponente = () => {
+					return()
+				}
+				export default NomeDoComponente			
+			
+			ou, melhorado:
+			
+			    No componente :
+				export const NomeDoComponente = () => {
+					return()
+				}
+				
+				No index.js
+				import { NomeDoComponente } from "./NomeDoComponente";
+				export default NomeDoComponente;				
 			
 		Métodos de ciclo de vida
 		
@@ -64,7 +77,10 @@
 			import Translate from "./components/translate";
 			import Languages from "./components/languages";
 
-			ReactDom.createRoot(getElementById('roo').render(
+			!!! Quando está ativo o StrictMode, o React faz renderizações !!!!
+			!!! adicionais no modo de desenvolvimento, mas não faz no modo de produção !!!
+			
+			ReactDom.createRoot(document.getElementById('root')).render(
 				<React.StrictMode>
 					<CssBaseline />
 					<App />
@@ -73,9 +89,7 @@
 
 			css class = className
 
-			const function NomeDoComponente() {
-				return()
-			}
+
 			
 			Hooks and Effect
 			
@@ -83,6 +97,10 @@
 				not be called from inside of a loop, a conditional expression, or any place that is not a function
 				defining a component. This must be done to ensure that the hooks are always called in the same order,
 				and if this isn't the case the application will behave erratically.
+
+Quando em Classe possui oncomponentdidmount, etc... em funçao não há hooks, então, 
+utiliza-se useEffect para fazer hooks ( funciona sempre quando faz um render() )
+Para alterar é o segundo parâmetro, valores
 
 				To recap, hooks may only be called from the inside of a function body that defines a React component.
 				

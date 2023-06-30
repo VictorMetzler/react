@@ -1,39 +1,6 @@
 
 npm install react-scripts --save
 
-	map - quando se quer percorrer, algo simples
-	
-		O método map() invoca a função callback passada por argumento para cada elemento
-		do Array e devolve um novo Array como resultado.
-		
-		var numbers = [1, 4, 9];
-		var doubles = numbers.map(function(currentValue) { return currentValue * 2; });
-		// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
-
-	reduce - quando se quer interagir entre os valores do array
-	
-		O método reduce() executa uma função reducer (fornecida por você) para cada elemento
-		do array, resultando num único valor de retorno.
-
-		const array1 = [1, 2, 3, 4];
-
-		// 0 + 1 + 2 + 3 + 4
-		const initialValue = 0;
-		const sumWithInitial = array1.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
-		
-	filter - quando se quer filtrar, incluir critérios, etc.
-	
-		O método filter() cria um novo array com todos os elementos que passaram no teste
-		implementado pela função fornecida.
-
-		function checkAdult(age) {
-		  return age >= 18;
-		}		
-
-		const ages = [32, 33, 16, 40];
-		const result = ages.filter(checkAdult);
-
-
 When you use console.log for debugging, don't combine objects
 in a Java-like fashion by using the plus operator. Instead of writing:
 
@@ -65,44 +32,6 @@ Components tab to the developer tools. The new developer tools tab can be used t
 the different React elements in the application, along with their state and props:
 
 Dev tools shows the state of hooks in the order of their definition.
-
-
-Instalar:
-	
-	Visual Studio,
-	   caso o acima não instale, também baixar o NodeJS que instala o NPM junto
-	GIT for windows
-
-Visual Studio	
-	
-	Em baixo a esquerda, ícone "Contas", fazer login para carregar as configurações salvas.
-	
-	Tem um ícone em baixo a esquerda do react Git, logar conta e clocar a pasta react.
-	
-	Shift + Alt + F  formata com Pretier	
-
-	ctrl + ' para abrir o terminal:
-
-	npx create-react-app my-project --use-npm
-	 or create-react-app ./  se já estiver na pasta com o nome do app
-		webpack - a file bundler
-		webpack Dev Server - a development sever
-		Babel - a transpiler (Source-to-source compiler) - jsx
-		Several polyfills
-		ESLint - A linter (Find and fix problems in your JavaScript code)
-		Jest - The React testing library
-		
-		arrow function () => {} garante o this, utilizar na construção não na chamada
-
-	npm start - open in http://localhost:3000/	
-	
-		se der: "start": "react-scripts start"
-		substirui isso: "start": "react-scripts start",
-		por isso: "start": "react-scripts --openssl-legacy-provider start",
-	
-	npm run build - create a minified bundle to deploy to production
-
-		
 
 
 Material UI

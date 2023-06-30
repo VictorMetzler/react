@@ -1,10 +1,23 @@
 
-
 	Node.js:
 
 		https://nodejs.org/en/download
 
 		node -v mostra a versão instalada
+
+		NPM
+
+			Node Package Manager
+			Pre-installed with Node.js
+			npm init [-y] (create package.json)
+				alterar default -> npm set init-author-name "Name"
+				volta -> npm config delete init-author-name
+			npm install PACKAGE_NAME [--save] (--save salva no package.json como dependência, então é super importante)
+			npm install (instala tudo o que tiver no Package.json)
+			npm install[@4.2.3] --save-dev
+			npm install --production
+			npm uninstall|remove|un|rm PACKAGE_NAME [--save | --save-dev]
+			npm update PACKAGE_NAME
 
 	Visual Studio Code
 	
@@ -14,12 +27,39 @@
 
 		ctrl + ' para abrir o terminal
 
-	Git for windows
+	Git for windows ( para o React utilizar )
 		
 		https://git-scm.com/
 
 	Se quiser uma IDE para gerenciar os Respositórios do GitHub:
 
 		GitHub Desktop
+
+	React DevTools
 	
+		Instalar extensão no navegador para ter acesso à algumas ferramentas de debug
+		https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
 		
+	-----------------------------
+
+	npx create-react-app my-project --use-npm
+	 or create-react-app ./  se já estiver na pasta com o nome do app
+		webpack - a file bundler
+		webpack Dev Server - a development sever
+		Babel - a transpiler (Source-to-source compiler) - jsx
+		Several polyfills
+		ESLint - A linter (Find and fix problems in your JavaScript code)
+		Jest - The React testing library
+		
+		this nos callbacks do JSX
+		Em JavaScript, os métodos de classe não são vinculados por padrão
+		arrow function () => {} garante o this, utilizar na construção não na chamada
+		Essa sintaxe é habilitada por padrão no Create React App.
+
+	npm start - open in http://localhost:3000/	
+
+		se der: "start": "react-scripts start"
+		substirui isso: "start": "react-scripts start",
+		por isso: "start": "react-scripts --openssl-legacy-provider start",
+
+	npm run build - create a minified bundle to deploy to production	

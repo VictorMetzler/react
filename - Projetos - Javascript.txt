@@ -1,6 +1,12 @@
 
 	Javascript
 
+		Functional Components | Stateless Components
+
+? prototype compartilha algo com todas as instâncias similares			
+
+		operador [ spred ] -> ... -> "abre" o objeto e/ou recebe todo o conteúdo dele
+
 		Spread syntax (...) -> allows an iterable such as an array expression
 		or string to be expanded in places where zero or more arguments (for function calls) or
 		elements (for array literals) are expected, or an object expression to be expanded in places
@@ -20,3 +26,35 @@
 			var [firstName,,thirdName] = ["alpha", "beta", "gamma", "delta"];
 			var [firstName,,...lastName] = ["alpha", "beta", "gamma", "delta"];
 			[x, y, ...restof] = [10, 20, 30, 40, 50];
+			
+		map - quando se quer percorrer, algo simples
+		
+			O método map() invoca a função callback passada por argumento para cada elemento
+			do Array e devolve um novo Array como resultado.
+			
+			var numbers = [1, 4, 9];
+			var doubles = numbers.map(function(currentValue) { return currentValue * 2; });
+			// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
+
+		reduce - quando se quer interagir entre os valores do array
+		
+			O método reduce() executa uma função reducer (fornecida por você) para cada elemento
+			do array, resultando num único valor de retorno.
+
+			const array1 = [1, 2, 3, 4];
+
+			// 0 + 1 + 2 + 3 + 4
+			const initialValue = 0;
+			const sumWithInitial = array1.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
+			
+		filter - quando se quer filtrar, incluir critérios, etc.
+		
+			O método filter() cria um novo array com todos os elementos que passaram no teste
+			implementado pela função fornecida.
+
+			function checkAdult(age) {
+			  return age >= 18;
+			}		
+
+			const ages = [32, 33, 16, 40];
+			const result = ages.filter(checkAdult);		
