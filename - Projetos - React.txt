@@ -11,8 +11,11 @@
 
 		props:
 		
-			Variáres passadas à um componente por padrão entram nos props, pode-se
-			"explodir" o props assim: isso (props) passa para  isso ({var1, var2})
+			Variáres passadas à um componente por padrão são agrupadas no props, pode-se
+			acessar o props assim props.variavel ou "explodir" o props assim:
+			isso (props) passa para  isso ({var1, var2})
+			
+		Data Binding:
 		
 		State ( any data that can change - useState <-> setState )
 			* não utilizar class ... constructor(props) { super(props_ ... isso é velho
@@ -147,7 +150,7 @@ Para alterar é o segundo parâmetro, valores
 				The biggest problems are due to the fact that React treats a component defined inside of another component
 				as a new component in every render. This makes it impossible for React to optimize the component.		
 
-			Do not user Index as a key on any list of items
+			Do not user Index as a key on any list of items ( ou vem do banco as PKs para utilizar como key ou utiliza-se como abaixo)
 			
 				A key is the only thing React uses to identify DOM elements. What happens if you push an item to the list
 				or remove something in the middle? If the key is same as before React assumes that the DOM element represents

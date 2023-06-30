@@ -31,7 +31,7 @@
 		`${NomeDaVariavel ou (javascript que resulta em string)}` aqui dentro aceita single e double quote
 		https://www.w3schools.com/js/js_string_templates.asp
 			
-		map - quando se quer percorrer, algo simples
+		map - quando se quer percorrer e retornar algo manipulado, um novo array manipulado
 		
 			O método map() invoca a função callback passada por argumento para cada elemento
 			do Array e devolve um novo Array como resultado.
@@ -39,7 +39,9 @@
 			var numbers = [1, 4, 9];
 			var doubles = numbers.map(function(currentValue) { return currentValue * 2; });
 			// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
-
+			ou mais curto:
+ 			  var doubles = numbers.map(function(numero) => {numero * 2}) ou var doubles = numbers.map(numero => numero * 2)
+			  
 		reduce - quando se quer interagir entre os valores do array
 		
 			O método reduce() executa uma função reducer (fornecida por você) para cada elemento
