@@ -3,14 +3,28 @@
 	
 		box-sizing: border-box; 
 		
-		Tells the browser to account for any border and padding in the values you specify for an element's width and height.
-    	If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the
-		content box will shrink to absorb that extra width
-		
-		https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+			Tells the browser to account for any border and padding in the values you specify for an element's width and height.
+			If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the
+			content box will shrink to absorb that extra width
+			
+			https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 
-		Aplica em todos os elementos:
-		* {
-		  box-sizing: border-box;
-		}		
+			Aplica em todos os elementos:
+			* {
+			  box-sizing: border-box;
+			}
+
+		flexbox: Flexbox Layout Module
+		
+			Before the Flexbox Layout module, there were four layout modes:
+
+			Block, for sections in a webpage
+			Inline, for text
+			Table, for two-dimensional table data
+			Positioned, for explicit position of an element
+			The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning			
+			
+			https://www.w3schools.com/css/css3_flexbox.asp
+		
+		
 		

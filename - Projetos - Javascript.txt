@@ -27,6 +27,10 @@
 			var [firstName,,...lastName] = ["alpha", "beta", "gamma", "delta"];
 			[x, y, ...restof] = [10, 20, 30, 40, 50];
 			
+		Template Literals
+		`${NomeDaVariavel ou (javascript que resulta em string)}` aqui dentro aceita single e double quote
+		https://www.w3schools.com/js/js_string_templates.asp
+			
 		map - quando se quer percorrer, algo simples
 		
 			O método map() invoca a função callback passada por argumento para cada elemento

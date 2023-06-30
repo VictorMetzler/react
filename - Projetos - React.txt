@@ -9,7 +9,10 @@
 		npm install styled-components --save
 		https://styled-components.com/
 
-		props
+		props:
+		
+			Variáres passadas à um componente por padrão entram nos props, pode-se
+			"explodir" o props assim: isso (props) passa para  isso ({var1, var2})
 		
 		State ( any data that can change - useState <-> setState )
 			* não utilizar class ... constructor(props) { super(props_ ... isso é velho
@@ -35,6 +38,10 @@
 
 			O React trata componentes começando com letras minúsculas como tags do DOM. Por exemplo, <div /> representa
 			uma tag div do HTML, mas <Welcome /> representa um componente e requer que Welcome esteja no escopo.
+			
+			- Return: dentro do return pode-se utilizar javascript usando o { NomeVariavel ou javascript }
+			
+			- Estrutura:
 			
 				const NomeDoComponente = () => {
 					return()
