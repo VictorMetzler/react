@@ -15,6 +15,9 @@
 			acessar o props assim props.variavel ou "explodir" o props assim:
 			isso (props) passa para  isso ({var1, var2})
 			
+			Pode-se passar dados para um componente pela propriedade props.children
+			<Botao>Criar card</Botao>, no componente Botao, acessar o conteúdo através de props.children			
+			
 		Data Binding:
 		
 		State ( any data that can change - useState <-> setState )
@@ -60,7 +63,7 @@
 				
 				No index.js
 				import { NomeDoComponente } from "./NomeDoComponente";
-				export default NomeDoComponente;				
+				export default NomeDoComponente;			
 			
 		Métodos de ciclo de vida
 		
