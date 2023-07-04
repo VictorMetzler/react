@@ -1,6 +1,8 @@
 
 	React -> is a View Library
 
+		https://react.dev/reference/react
+
 		react-animations
 		npm install react-animations --save
 		https://animate.style/
