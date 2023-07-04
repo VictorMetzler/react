@@ -18,6 +18,20 @@
 			npm install --production
 			npm uninstall|remove|un|rm PACKAGE_NAME [--save | --save-dev]
 			npm update PACKAGE_NAME
+			
+		Vite
+		
+			https://vitejs.dev/
+			
+			npm create vite@latest
+			cd nomedoprojeto
+			npm install
+			npm run dev
+
+		SWC ( em vez do babel ): Speedy Web Compiler
+		
+			https://swc.rs/
+			
 
 	Visual Studio Code
 	
@@ -26,6 +40,8 @@
 		Shift + Alt + F  formata com Pretier
 
 		ctrl + ' para abrir o terminal
+		
+		no terminal, na pasta de um projeto, "code ." abre o VS Code
 
 	Git for windows ( para o React utilizar )
 		
