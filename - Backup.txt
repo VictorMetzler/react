@@ -34,20 +34,5 @@ the different React elements in the application, along with their state and prop
 Dev tools shows the state of hooks in the order of their definition.
 
 
-Material UI
 
-	import { CssBaseline } from '@material-ui/core';
-	<CssBaseline />
-	<App />
-	
-	Incluir ou não ?? shrink-to-fit=no ??
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-
-	Thema -> ThemeProvider, createMuiTheme
-	
-	Styles -> makeStyles
-
-	Icons -> npm install @material-ui/icons	
 	

@@ -30,7 +30,12 @@
 		Template Literals
 		`${NomeDaVariavel ou (javascript que resulta em string)}` aqui dentro aceita single e double quote
 		https://www.w3schools.com/js/js_string_templates.asp
-			
+		
+		foreach - quando se quer percorrer um objeto apenas
+			products.forEach((product) => {
+				product.category
+			});	
+		
 		map - quando se quer percorrer e retornar algo manipulado, um novo array manipulado
 		
 			O método map() invoca a função callback passada por argumento para cada elemento

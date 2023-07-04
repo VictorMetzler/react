@@ -1,0 +1,25 @@
+
+	Material UI
+
+		https://mui.com/material-ui/getting-started/installation/
+
+		npm install @mui/material @emotion/react @emotion/styled
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+		
+		import { CssBaseline } from '@mui/material/CssBaseline';
+		<CssBaseline />
+		<App />
+		
+		
+		
+		Incluir ou não ?? shrink-to-fit=no ??
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+		Thema -> ThemeProvider, createMuiTheme
+		
+		Styles -> makeStyles
+
+		Icons -> npm install @material-ui/icons	
