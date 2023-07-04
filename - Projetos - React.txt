@@ -1,5 +1,5 @@
 
-	React -> is a View Library
+	React -> is a View Library		
 
 		https://react.dev/reference/react
 
@@ -10,6 +10,13 @@
 		styled-components lets you write actual CSS in your JavaScript
 		npm install styled-components --save
 		https://styled-components.com/
+
+		"escape into JavaScript” from JSX attributes utilizing curly braces
+
+		If use style iside a component and utilizes variables in javascript
+			style={{
+			  color: product.isFruit ? 'magenta' : 'darkgreen'
+			}}		
 
 		props:
 		
@@ -23,13 +30,32 @@
 		Data Binding:
 		
 		State ( any data that can change - useState <-> setState )
-			* não utilizar class ... constructor(props) { super(props_ ... isso é velho
-			utilizar State Hook -> const [count, setCount] = useState(0)
+		
+            https://dev.to/johnstonlogan/react-hooks-barney-style-1hk7
+		
+			State Hook -> const [count, setCount] = useState(0)
+			O único lugar onde você pode atribuir this.state é o construtor do objeto/classe ( dentro do export por exemplo )
+						
+			setState via classe:
 			
-			O único lugar onde você pode atribuir this.state é o construtor.
+				Using state in a class component requires the building of a state object.
+				This state object is then modified by calling this.setState("new state").
+				
+				  no constructor, criar objeto que conterá os dados de state: 
+					state = {
+						value: ''
+					}
+				  no objeto manipular com this.setState: onChange={(e) => this.setState({ value: e.target.value })}	
 			
-			setState via objeto  -> this.setState({ this.state.count = 0 });
-			setState via funcção -> this.setState((state, props) => ({ counter: state.counter + props.increment });
+			setState via Function:
+			
+				With a functional component, we can use React hooks, specifically the useState() hook.
+				This simplifies the creation of a state component and the function that updates it.
+			
+				  no constructor, utilizar useState:
+				    const [ valor, setValorfnc ] = useState(ValorInicial)
+				
+				  no objecto, utilizar a função de seter: onChange={ (e) => setValorfnc(e.target.value) }
 
 		Os Dados Fluem para Baixo
 		Isso é comumente chamado de fluxo de dados “top-down” ou “unidirecional”
@@ -48,6 +74,7 @@
 			uma tag div do HTML, mas <Welcome /> representa um componente e requer que Welcome esteja no escopo.
 			
 			- Return: dentro do return pode-se utilizar javascript usando o { NomeVariavel ou javascript }
+			Pode utilizar empty wrapper <>...</> 
 			
 			- Estrutura:
 			

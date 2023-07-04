@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./CampoTexto.css";
-let valor = "Victor";
-const aoDigitado = (evento) => {
-  let valor = evento.target.value;
-  console.log(valor);
-};
 
 export const CampoTexto = (props) => {
+  const [valor, setaValor] = useState("Victor");
+
+  const aoDigitado = (evento) => {
+    setaValor(evento.target.value);
+    console.log(valor);
+  };
+
   return (
     <div className="campo-texto">
       <label>{props.label}</label>
