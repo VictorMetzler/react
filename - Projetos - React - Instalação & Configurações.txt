@@ -4,17 +4,19 @@
 		https://nodejs.org/en/download
 
 		node -v mostra a versão instalada
+		
+		Para atualizar, ir até o site e baixar a nova versão
 
 		NPM
-
-			Node Package Manager
+			Node Package Manager			
 			Pre-installed with Node.js
-			npm init [-y] (create package.json)
-				alterar default -> npm set init-author-name "Name"
-				volta -> npm config delete init-author-name
+
+			Update:
+			npm install -g npm@latest
+			npm install latest-version	
+			
 			npm install PACKAGE_NAME [--save] (--save salva no package.json como dependência, então é super importante)
 			npm install (instala tudo o que tiver no Package.json)
-			npm install[@4.2.3] --save-dev
 			npm install --production
 			npm uninstall|remove|un|rm PACKAGE_NAME [--save | --save-dev]
 			npm update PACKAGE_NAME
