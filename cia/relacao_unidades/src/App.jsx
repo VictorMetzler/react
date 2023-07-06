@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import Menu from "./components/Menu";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -7,13 +7,13 @@ function App() {
       fluid
       className="p-0"
       style={{
-        backgroundColor: "var(--cia-bg-color)",
-        color: "var(--cia-color)",
+        backgroundColor: "var(--cia-bg-color, #f51a2e)",
+        color: "var(--cia-color, #424242)",
       }}
     >
-      <Menu
+      <Header
         img_path="/images/cia_logo.png"
-        bg_color="var(--cia-header-bg-color)"
+        bg_color="var(--cia-header-bg-color, #f51a2e)"
         titulo="Relação das Unidades"
       />
     </Container>
