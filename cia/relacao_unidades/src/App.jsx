@@ -14,6 +14,7 @@ function App() {
       <Menu
         img_path="/images/cia_logo.png"
         bg_color="var(--cia-header-bg-color)"
+        titulo="Relação das Unidades"
       />
     </Container>
   );
