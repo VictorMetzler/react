@@ -5,7 +5,7 @@ function App() {
   return (
     <Container
       fluid
-      className="p-0"
+      className="p-0 m-0"
       style={{
         backgroundColor: "var(--cia-bg-color, #f51a2e)",
         color: "var(--cia-color, #424242)",
