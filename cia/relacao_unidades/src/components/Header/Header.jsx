@@ -48,10 +48,10 @@ export const Header = (props) => {
                 }}
               />
             </NavbarBrand>
-            <div className="d-none d-md-block d-lg-block d-xl-block ms-md-1 me-0 me-md-3 text-white">
+            <div className="d-none d-md-block d-lg-block d-xl-block ms-md-1 mb-md-1 me-0 me-md-3 text-white">
               |
             </div>
-            <NavbarBrand className="p-0 m-0 mb-2 mb-md-0 ms-0 ms-md-3 mt-3 mt-md-0">
+            <NavbarBrand className="p-0 m-0 mb-2 mb-md-1 ms-0 ms-md-3 mt-3 mt-md-0">
               {props.titulo}
             </NavbarBrand>
           </Navbar>
