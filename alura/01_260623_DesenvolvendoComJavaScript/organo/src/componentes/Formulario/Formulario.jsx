@@ -4,11 +4,16 @@ import { ListaSuspensa } from "../ListaSuspensa/ListaSuspensa";
 import { Botao } from "../Botao/Botao";
 import { useState } from "react";
 
-export const Formulario = () => {
+export const Formulario = ({ aoColaboradorCadastrado }) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
+
+  const aoSalvar = (evento) => {
+    evento.preventDefault();
+    aoColaboradorCadastrado({ nome, cargo, imagem, time });
+  };
 
   const times = [
     "",
@@ -20,11 +25,6 @@ export const Formulario = () => {
     "Mobiel",
     "Inovação e Gestão",
   ];
-
-  const aoSalvar = (evento) => {
-    evento.preventDefault();
-    console.log("Form foi submetido", nome, cargo, imagem, time);
-  };
 
   return (
     <section className="formulario">

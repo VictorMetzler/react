@@ -6,6 +6,11 @@
 ? prototype compartilha algo com todas as instâncias similares			
 
 		operador [ spred ] -> ... -> "abre" o objeto e/ou recebe todo o conteúdo dele
+		
+			setColaboradores([...colaboradores, colaborador]);
+			abre um array de colaboradores dentro
+			de um novo array e adiciona o novo
+			colaborador por último
 
 		Spread syntax (...) -> allows an iterable such as an array expression
 		or string to be expanded in places where zero or more arguments (for function calls) or
