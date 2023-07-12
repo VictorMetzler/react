@@ -4,7 +4,7 @@ import { ListaSuspensa } from "../ListaSuspensa/ListaSuspensa";
 import { Botao } from "../Botao/Botao";
 import { useState } from "react";
 
-export const Formulario = ({ aoColaboradorCadastrado }) => {
+export const Formulario = (props) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -12,19 +12,8 @@ export const Formulario = ({ aoColaboradorCadastrado }) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    aoColaboradorCadastrado({ nome, cargo, imagem, time });
+    props.aoColaboradorCadastrado({ nome, cargo, imagem, time });
   };
-
-  const times = [
-    "",
-    "Programação",
-    "Front End",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobiel",
-    "Inovação e Gestão",
-  ];
 
   return (
     <section className="formulario">
@@ -53,7 +42,7 @@ export const Formulario = ({ aoColaboradorCadastrado }) => {
         <ListaSuspensa
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
