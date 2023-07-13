@@ -48,21 +48,7 @@ function App() {
         bg_color="var(--cia-header-bg-color, #f51a2e)"
         titulo="Relação das Unidades"
       />
-      <Unidades
-        unidades={unidades.sort((vUndA, vUndB) => {
-          if (
-            vUndA.uf + vUndA.cidade + vUndA.nomecurtoapresentacao <
-            vUndB.uf + vUndB.cidade + vUndB.nomecurtoapresentacao
-          ) {
-            return -1;
-          } else if (
-            vUndA.uf + vUndA.cidade + vUndA.nomecurtoapresentacao >
-            vUndB.uf + vUndB.cidade + vUndB.nomecurtoapresentacao
-          ) {
-            return 1;
-          } else return 0;
-        })}
-      />
+      <Unidades unidades={unidades} />
     </Container>
   );
 }
