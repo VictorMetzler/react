@@ -42,7 +42,14 @@ function App() {
     },
   ];
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState([
+    {
+      nome: "nome",
+      cargo: "cargo",
+      imagem: "https://github.com/victormetzler.png",
+      time: "Front End",
+    },
+  ]);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
@@ -60,10 +67,11 @@ function App() {
 
       {times.map((time) => (
         <Time
-          nome={time.nome}
           key={time.nome}
+          nome={time.nome}
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
+          colaboradores={colaboradores}
         />
       ))}
     </div>
