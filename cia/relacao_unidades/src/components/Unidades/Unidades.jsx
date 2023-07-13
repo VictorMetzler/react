@@ -1,3 +1,4 @@
+import Estados from "./Estados";
 import "./Unidades.css";
 
 export const Unidades = (props) => {
@@ -15,10 +16,8 @@ export const Unidades = (props) => {
   });
 
   return (
-    <>
-      {unidadesSorted.map((undObj, vIndex) => (
-        <div key={vIndex}>{undObj.nomecurtoapresentacao}</div>
-      ))}
-    </>
+    <section className="unidades">
+      <Estados unidades={unidadesSorted} />
+    </section>
   );
 };
