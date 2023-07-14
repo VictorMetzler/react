@@ -14,10 +14,22 @@ export const Unidades = (props) => {
       ? -1
       : 1;
   });
-
+  let vUFatual = null;
   return (
     <section className="unidades">
-      <Estados unidades={unidadesSorted} />
+      {unidadesSorted.map((undObj, vIndex) => {
+        if (vUFatual != undObj.uf) {
+          vUFatual = undObj.uf;
+          return (
+            <Estados
+              uf={undObj.uf}
+              unidades={unidadesSorted.filter(
+                (unidade) => unidade.uf === vUFatual
+              )}
+            />
+          );
+        }
+      })}
     </section>
   );
 };

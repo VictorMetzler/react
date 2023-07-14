@@ -1,7 +1,22 @@
 .estados {
   display: flex;
+  flex: 0 0 100%;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px dotted blue;
+}
+
+.estados h1 {
+  display: flex;
+  align-self: flex-start;
+  border: 1px dotted red;
+}
+
+.estados h2 {
+  display: flex;
+  border: 1px dotted green;
 }

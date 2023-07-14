@@ -2,20 +2,26 @@ import Cidades from "../Cidades";
 import "./Estados.css";
 
 export const Estados = (props) => {
-  let vUFatual = null;
+  let vCidadeAtual = null;
   return (
-    <>
+    <section className="estados">
+      <h1>{props.uf}</h1>
       {props.unidades.map((undObj, vIndex) => {
-        if (vUFatual != undObj.uf) {
-          vUFatual = undObj.uf;
+        if (vCidadeAtual != undObj.cidade) {
+          vCidadeAtual = undObj.cidade;
           return (
-            <section className="estados">
-              <h1>{vUFatual}</h1>
-              <Cidades estado={vUFatual} unidades={props.unidades} />
-            </section>
+            <>
+              <h2>{vCidadeAtual}</h2>
+              <Cidades
+                cidade={vCidadeAtual}
+                unidades={props.unidades.filter(
+                  (unidade) => unidade.cidade === vCidadeAtual
+                )}
+              />
+            </>
           );
         }
       })}
-    </>
+    </section>
   );
 };
