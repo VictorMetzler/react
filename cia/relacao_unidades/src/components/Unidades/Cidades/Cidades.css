@@ -1,0 +1,15 @@
+.cidades {
+  display: flex;
+  flex: 0 0 100%;
+
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 15px;
+  border: 1px dotted blue;
+}
+
+.cidades .titulo {
+  display: flex;
+  align-self: flex-start;
+  border: 1px dotted red;
+}

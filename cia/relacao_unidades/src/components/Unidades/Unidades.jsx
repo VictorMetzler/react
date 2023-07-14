@@ -22,7 +22,8 @@ export const Unidades = (props) => {
           vUFatual = undObj.uf;
           return (
             <Estados
-              uf={undObj.uf}
+              key={vUFatual}
+              uf={vUFatual}
               unidades={unidadesSorted.filter(
                 (unidade) => unidade.uf === vUFatual
               )}
