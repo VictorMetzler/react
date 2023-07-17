@@ -1,6 +1,8 @@
 
 	React -> is a View Library		
 
+		! autocomplete do React para produzir um HTML do zero
+
 		https://react.dev/learn/thinking-in-react
 		
 		To implement a UI in React, you will usually follow the same five steps.

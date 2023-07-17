@@ -3,10 +3,11 @@
 
 - Espectativa de custos traz o último lançamento por categoria/tipo + inflação do mês da dataserlancado
 
-- Exitirão lançamentos que "reterão" valores lançados, como Investimentos, o valor sai do saldo e é computado por tipo para ficar ciente de quanto está "fora"
+- Existirão lançamentos que "reterão" valores lançados, como Investimentos, o valor sai do saldo e é computado por tipo para ficar ciente de quanto está "fora"
 	- Para estes tipos, poderá ser indicado em que instituição estão, quando entraram, qual previsão de retornarem à conta
 	- Quando retornarem a conta, informar o valor final ( daí dará para calacular o lucro )
 	
 - Lançamentos recorrentes, semana do ano, mes, terceira terça de mes/ano, etc...
 
-- 	
+- Área de notificações
+	- Saldo devedor com contas no dia
