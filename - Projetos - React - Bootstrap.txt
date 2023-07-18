@@ -18,7 +18,7 @@
 				Extra large	xl	≥1200px
 				Extra extra largexxl	≥1400px		
 		
-		Gap: g-0..5
+		Gap: gap-0..5
 			-  Use of gap utilities on the parent element. Add margin utilities to individual
 			   children of a grid or flex container ( row to ). Gap utilities are responsive
 			   by default, and are generated via our utilities API, based on the $spacers Sass map.
