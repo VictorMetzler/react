@@ -4,7 +4,8 @@
 		Atalhos:
 
 			!
-				- Autocomplete do React para produzir um HTML do zero
+				- Emmet Abreviation: Autocomplete do React para produzir muito código com poucas teclas
+				https://docs.emmet.io/abbreviations/
 			
 			ctrl+D
 				- Selecione primeiro o que quer, depois utilize ctrl + d para
@@ -17,6 +18,9 @@
 				
 			ctrl + '
 				- Abre o Terminal de comandos
+				
+			shift + alt + seta
+				- Faz uma cópia da seleção
 
 		https://react.dev/learn/thinking-in-react
 		

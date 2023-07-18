@@ -1,4 +1,6 @@
 
+- Modo noturno e diferentes themas
+
 - Ter uma tabela que contém o mês e o valor da inflação, de mês atual para trás é inflação histórica registrada, do mes em diante para prente é previsão
 
 - Espectativa de custos traz o último lançamento por categoria/tipo + inflação do mês da dataserlancado
@@ -11,3 +13,23 @@
 
 - Área de notificações
 	- Saldo devedor com contas no dia
+	
+- Menu superior sticked:
+	
+	- Saldo do dia corrente com previsão para o dia seguinte
+	- Último(s) lançamento(s)
+	
+- Listagem consolidada:
+
+	- No final de cada mês tem seu fechamento: soma das entradas, saídas, previsão e saldo 
+	
+			Data  Entrada  Saída  Previsão  Banco  Parcela  Categoria  Tipo  Descrição  Saldo
+			
+	Mobile   X    este  ou  este     X       X       X          X        X      X         X    Visão condensada ( com 1 linha ) visão expandida ( com duas linhas )
+		
+	Tablet
+
+	Desktop
+			
+	
+	
