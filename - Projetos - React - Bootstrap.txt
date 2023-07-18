@@ -5,4 +5,31 @@
 		
 		npm install react-bootstrap bootstrap
 		
+		{breakpoint}-{size} sm, md, lg, xl, and xxl.
 		
+			Breakpoint	Class infix	Dimensions
+			Celulares:
+				Extra small	None	<576px
+				Small	sm	≥576px
+			Tablets:
+				Medium	md	≥768px
+				Large	lg	≥992px
+			Desktop:
+				Extra large	xl	≥1200px
+				Extra extra largexxl	≥1400px		
+		
+		Gap: g-0..5
+			-  Use of gap utilities on the parent element. Add margin utilities to individual
+			   children of a grid or flex container ( row to ). Gap utilities are responsive
+			   by default, and are generated via our utilities API, based on the $spacers Sass map.
+			   
+		Negative margin: mt-n1..5
+			- In CSS, margin properties can utilize negative values (padding cannot).
+			
+		Horizontal centering: mx-auto
+			- class for horizontally centering fixed-width block level content—that is, content
+			  that has display: block and a width set—by setting the horizontal margins to auto.
+			  
+form-floating			  
+
+offcanvas

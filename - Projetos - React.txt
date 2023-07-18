@@ -1,7 +1,22 @@
 
 	React -> is a View Library		
 
-		! autocomplete do React para produzir um HTML do zero
+		Atalhos:
+
+			!
+				- Autocomplete do React para produzir um HTML do zero
+			
+			ctrl+D
+				- Selecione primeiro o que quer, depois utilize ctrl + d para
+  				  selecionar o(s) seguinte(s) igual(is) e editar/mover/inserir
+				  código ao mesmo tempo
+				  
+			shift + alt + f
+				- Formata o código com o formatador que estiver instalado,
+  	 			  no caso o Pretier
+				
+			ctrl + '
+				- Abre o Terminal de comandos
 
 		https://react.dev/learn/thinking-in-react
 		
