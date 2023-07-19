@@ -6,6 +6,9 @@
 			!
 				- Emmet Abreviation: Autocomplete do React para produzir muito código com poucas teclas
 				https://docs.emmet.io/abbreviations/
+				
+			div*3>div*3
+				- Cria três divs com três div dentre de cada
 			
 			ctrl+D
 				- Selecione primeiro o que quer, depois utilize ctrl + d para
