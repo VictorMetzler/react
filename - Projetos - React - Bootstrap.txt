@@ -31,7 +31,18 @@
 			  that has display: block and a width set—by setting the horizontal margins to auto.
 		
 		Shadows: shadow-none, shadow-sm, shadow e shadow-lg
+		
+		Input group:
+			- Easily extend form controls by adding text, buttons, or button groups on either
+			side of textual inputs, custom selects, and custom file inputs.
+			https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
 			
+		Form controls:
+			- Give textual form controls like <input>s and <textarea>s an upgrade with custom
+			styles, sizing, focus states, and more.
+			https://getbootstrap.com/docs/5.3/forms/form-control/#form-text
+			
+		
 		
 form-floating			  
 
