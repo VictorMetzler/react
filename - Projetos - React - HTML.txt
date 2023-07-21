@@ -6,3 +6,12 @@
 		
 			The div element has no special meaning. It is often used as a block of children elements. The section element
 			introduced in HTML5 standard is used to group related elements, such as a subsection of a long article.
+			
+		A <footer> element typically contains:
+
+			authorship information
+			copyright information
+			contact information
+			sitemap
+			back to top links
+			related documents			

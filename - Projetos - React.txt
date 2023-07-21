@@ -9,6 +9,8 @@
 				
 			div*3>div*3
 				- Cria três divs com três div dentre de cada
+				
+			link:favicon	
 			
 			ctrl+D
 				- Selecione primeiro o que quer, depois utilize ctrl + d para

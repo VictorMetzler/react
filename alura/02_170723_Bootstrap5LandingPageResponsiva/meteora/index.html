@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>Meteora</title>
     <link
       rel="stylesheet"
@@ -19,9 +20,17 @@
   <body>
     <!-- Menu - Start-->
 
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
+    <nav class="navbar navbar-expand-md bg-black" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Meteora</a>
+        <a class="navbar-brand" href="#">
+          <h1 class="m-0">
+            <img
+              class="d-block"
+              src="./assets/logo-meteora.png"
+              alt="Logo da lojha Meteora"
+            />
+          </h1>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -50,12 +59,12 @@
           </ul>
           <form class="d-flex" role="search">
             <input
-              class="form-control me-2"
+              class="form-control me-2 border rounded-0 bg-white border-white text-black"
               type="search"
               placeholder="Digite o produto"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-light rounded-0" type="submit">
               Buscar
             </button>
           </form>
@@ -66,6 +75,84 @@
     <!-- Menu - End -->
 
     <!-- Carousel - Start -->
+    <!--
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div
+        class="d-flex carousel-item active justify-content-center"
+        style="background-color: rgb(137, 95, 181)"
+      >
+        <img
+          class="img-fluid d-md-none"
+          src="./assets/Mobile/banner1-mobile.png"
+          alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
+        />
+        <img
+          class="img-fluid d-none d-md-block d-xl-none"
+          src="./assets/Tablet/banner1-tablet.png"
+          alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
+        />
+        <img
+          class="img-fluid d-none d-xl-block"
+          src="./assets/Desktop/banner1-desktop.png"
+          alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
+        />
+        </div>
+        <div
+          class="d-flex carousel-item justify-content-center"
+          style="background-color: rgb(2245, 141, 144)"
+        >
+          <img
+            class="img-fluid d-md-none"
+            src="./assets/Mobile/banner2-mobile.png"
+            alt=""
+          />
+
+          <img
+            class="img-fluid d-none d-md-block d-xl-none"
+            src="./assets/Tablet/banner2-tablet.png"
+            alt=""
+          />
+
+          <img
+            class="img-fluid d-none d-xl-block"
+            src="./assets/Desktop/banner2-desktop.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="d-flex carousel-item justify-content-center"
+          style="background-color: rgb(248, 127, 70)"
+        >
+          <img
+            class="img-fluid d-md-none"
+            src="./assets/Mobile/banner3-mobile.png"
+            alt=""
+          />
+
+          <img
+            class="img-fluid d-none d-md-block d-xl-none"
+            src="./assets/Tablet/banner3-tablet.png"
+            alt=""
+          />
+
+          <img
+            class="img-fluid d-none d-xl-block"
+            src="./assets/Desktop/banner3-desktop.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  -->
 
     <div
       id="carouselExampleCaptions"
@@ -95,35 +182,68 @@
         ></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item" style="background-color: rgb(137, 95, 181)">
           <img
-            src="imagens/carousel/placeholder.png"
-            class="d-block w-100"
-            alt="..."
+            class="img-fluid d-md-none"
+            src="./assets/Mobile/banner1-mobile.png"
+            alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <img
+            class="img-fluid d-none d-md-block d-xl-none"
+            src="./assets/Tablet/banner1-tablet.png"
+            alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
+          />
+          <img
+            class="img-fluid d-none d-xl-block"
+            src="./assets/Desktop/banner1-desktop.png"
+            alt="Modelo feminino vestindo blusa rosa fluorescente, em fundo lilás"
+          />
+          <div class="carousel-caption">
+            <h5></h5>
+            <p></p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div
+          class="carousel-item active"
+          style="background-color: rgb(2245, 141, 144)"
+        >
           <img
-            src="imagens/carousel/placeholder.png"
-            class="d-block w-100"
-            alt="..."
+            class="img-fluid d-md-none"
+            src="./assets/Mobile/banner2-mobile.png"
+            alt=""
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+          <img
+            class="img-fluid d-none d-md-block d-xl-none"
+            src="./assets/Tablet/banner2-tablet.png"
+            alt=""
+          />
+          <img
+            class="img-fluid d-none d-xl-block"
+            src="./assets/Desktop/banner2-desktop.png"
+            alt=""
+          />
+          <div class="carousel-caption">
+            <h1>COLEÇÃO ATEMPORAL</h1>
+            <p>Estilo e qualidade para durar.</p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" style="background-color: rgb(248, 127, 70)">
           <img
-            src="imagens/carousel/placeholder.png"
-            class="d-block w-100"
-            alt="..."
+            class="img-fluid d-md-none"
+            src="./assets/Mobile/banner3-mobile.png"
+            alt=""
           />
-          <div class="carousel-caption d-none d-md-block">
+          <img
+            class="img-fluid d-none d-md-block d-xl-none"
+            src="./assets/Tablet/banner3-tablet.png"
+            alt=""
+          />
+          <img
+            class="img-fluid d-none d-xl-block"
+            src="./assets/Desktop/banner3-desktop.png"
+            alt=""
+          />
+          <div class="carousel-caption">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
@@ -171,8 +291,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -193,8 +315,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -215,8 +339,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -237,8 +363,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -259,8 +387,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -281,8 +411,10 @@
             <rect width="100%" height="100%" fill="#868e96"></rect>
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
           </svg>
-          <div class="card-header">
-            <p class="text-center">Categoria</p>
+          <div
+            class="d-flex align-items-center justify-content-center card-header bg-black"
+          >
+            <p class="text-center text-white my-0">Categoria</p>
           </div>
         </div>
       </div>
@@ -317,7 +449,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -344,7 +481,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -371,7 +513,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -398,7 +545,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -425,7 +577,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -452,7 +609,12 @@
               bulk of the card's content.
             </p>
             <p class="fw-bold">R$30,00</p>
-            <a href="#" class="btn btn-primary">Ver mais</a>
+            <a
+              href="#"
+              class="btn btn-primary rounded-0"
+              style="background-color: #9353ff; border-color: #9353ff"
+              >Ver mais</a
+            >
           </div>
         </div>
       </div>
@@ -462,33 +624,54 @@
 
     <!-- Banner footer - Start -->
 
-    <section class="pb-4">
+    <section class="pb-4 text-white bg-black py-4 my-5">
       <h2 class="text-center">Conheça todas as nossas facilidades</h2>
       <div
         class="d-flex flex-column flex-xxl-row justify-content-xxl-center align-items-center gap-3 px-3"
       >
         <div class="divs-facilidades d-flex align-items-center">
-          <div><i class="bi bi-x-diamond" style="font-size: 72px"></i></div>
           <div>
-            <div class="ms-3 mb-2">PAGUE PELO PIX</div>
+            <i
+              class="bi bi-x-diamond"
+              style="font-size: 72px; color: #daff01"
+            ></i>
+          </div>
+          <div>
+            <div class="ms-3 mb-2 fw-bold" style="color: #daff01">
+              PAGUE PELO PIX
+            </div>
             <div class="texto-menor ms-3">
               Ganhe 5% OFF em pagamentos via PIX
             </div>
           </div>
         </div>
         <div class="divs-facilidades d-flex align-items-center">
-          <div><i class="bi bi-arrow-repeat" style="font-size: 72px"></i></div>
           <div>
-            <div class="ms-3 mb-2">TROCA GRÁTIS</div>
+            <i
+              class="bi bi-arrow-repeat"
+              style="font-size: 72px; color: #daff01"
+            ></i>
+          </div>
+          <div>
+            <div class="ms-3 mb-2 fw-bold" style="color: #daff01">
+              TROCA GRÁTIS
+            </div>
             <div class="texto-menor ms-3">
               Fique livre para trocar em até 30 dias.
             </div>
           </div>
         </div>
         <div class="divs-facilidades d-flex align-items-center">
-          <div><i class="bi bi-flower1" style="font-size: 72px"></i></div>
           <div>
-            <div class="ms-3 mb-2">SUSTENTABILIDADE</div>
+            <i
+              class="bi bi-flower1"
+              style="font-size: 72px; color: #daff01"
+            ></i>
+          </div>
+          <div>
+            <div class="ms-3 mb-2 fw-bold" style="color: #daff01">
+              SUSTENTABILIDADE
+            </div>
             <div class="texto-menor ms-3">
               Moda responsável, que respeita o meio ambiente.
             </div>
@@ -507,18 +690,33 @@
         compra? Cadastre-se!
       </h5>
       <div class="input-group my-3">
-        <input
-          type="email"
-          placeholder="Digite seu e-mail"
-          aria-label="Digite seu e-mail"
-          aria-describedby="button-addon2"
-          class="form-control border-secondary"
-        />
+        <div class="form-floating">
+          <input
+            id="idEmail"
+            type="email"
+            placeholder="Digite seu e-mail"
+            aria-label="Digite seu e-mail"
+            aria-describedby="button-addon2"
+            class="form-control border-secondary rounded-0"
+          />
+          <label for="idEmail">Digite seu e-mail</label>
+        </div>
         <button type="button" id="button-addon2">Enviar</button>
       </div>
     </form>
 
     <!-- Receber feed footer - End -->
+
+    <!-- Footer - Start -->
+
+    <footer class="bg-black text-white text-center py-3 m-0">
+      <p class="m-0">
+        2023 <i class="bi bi-c-circle" style="font-size: 80%"></i> Desenvolvido
+        por Alura | Projeto fictício sem fins comerciais.
+      </p>
+    </footer>
+
+    <!-- Footer - End -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

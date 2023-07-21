@@ -36,12 +36,43 @@
 			- Easily extend form controls by adding text, buttons, or button groups on either
 			side of textual inputs, custom selects, and custom file inputs.
 			https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
+
+			<div class="input-group mb-3">
+			  <button type="button" class="btn btn-outline-secondary">Action</button>
+			  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			  </button>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			  </ul>
+			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+			</div>
 			
 		Form controls:
 			- Give textual form controls like <input>s and <textarea>s an upgrade with custom
 			styles, sizing, focus states, and more.
 			https://getbootstrap.com/docs/5.3/forms/form-control/#form-text
 			
+			<label for="inputPassword5" class="form-label">Password</label>
+			<input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+			<div id="passwordHelpBlock" class="form-text">
+			  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+			</div>
+		
+		Floating labels:
+			- Create beautifully simple form labels that float over your input fields.		
+			Wrap a pair of <input class="form-control"> and <label> elements in .form-floating to enable floating labels with Bootstrap’s textual form fields.
+			https://getbootstrap.com/docs/5.3/forms/floating-labels/
+			<div class="form-floating mb-3">
+			  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+			  <label for="floatingInput">Email address</label>
+			</div>
+		
+		.img-fluid: This applies max-width: 100%; and height: auto;	
 		
 		
 form-floating			  
