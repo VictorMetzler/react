@@ -10,6 +10,7 @@
 	- Quando retornarem a conta, informar o valor final ( daí dará para calacular o lucro )
 	
 - Lançamentos recorrentes, semana do ano, mes, terceira terça de mes/ano, etc...
+	- Pode-se lançar um lançamento recorrente anual sem data, apenas mês, assim aparece na previsão do primeiro dia do mês e indica que no ano passado caiu tal data
 
 - Área de notificações
 	- Saldo devedor com contas no dia
