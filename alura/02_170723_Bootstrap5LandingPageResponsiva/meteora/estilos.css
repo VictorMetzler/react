@@ -5,3 +5,21 @@
 .divs-facilidades {
   width: 325px;
 }
+
+.div-novidades {
+  width: 325px;
+}
+
+.botao-lilas {
+  background-color: #9353ff;
+}
+
+.verde-limao {
+  color: #daff01;
+}
+
+@media (min-width: 768px) {
+  .div-novidades {
+    width: 696px;
+  }
+}
