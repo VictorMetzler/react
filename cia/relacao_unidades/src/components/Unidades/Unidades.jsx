@@ -16,7 +16,7 @@ export const Unidades = (props) => {
   });
   let vUFatual = null;
   return (
-    <section className="unidades">
+    <section className="d-inline-flex justify-content-center p-2 border border-2 border-success">
       {unidadesSorted.map((undObj, vIndex) => {
         if (vUFatual != undObj.uf) {
           vUFatual = undObj.uf;

@@ -8,8 +8,7 @@
 }
 
 .unidade img {
-  width: 100px;
-  border-radius: 50%;
+  width: 100%;
   position: relative;
   bottom: -50px;
 }
