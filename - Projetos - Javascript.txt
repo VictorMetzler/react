@@ -1,6 +1,13 @@
 
 	Javascript
 
+		<script defer ....   defer = adiar
+			Indicate to a browser that the script is meant to be executed after the document
+			has been parsed, but before firing DOMContentLoaded.
+			Scripts with defer attribute will prevent the DOMContentLoaded event from firing
+			until the script has loaded and finished evaluating.
+			Defer respects the order that it appears!!
+
 		Functional Components | Stateless Components
 
 ? prototype compartilha algo com todas as instâncias similares			

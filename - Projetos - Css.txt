@@ -26,6 +26,11 @@
 			
 			https://www.w3schools.com/css/css3_flexbox.asp
 		
+		justify-content: center;
+			Interage no eixo X (Main) posicionando os elementos aonde desejado
+		align-items: center;	
+			Interage no eixo Y (Cross) posicionando os elementos aonde desejado
+		
 		css Variables:
 		
 			
