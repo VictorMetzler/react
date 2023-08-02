@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        /*
+        align-items: center;
+        justify-items: center;
+*/
+        height: 300px;
+        /*        
+        row-gap: 5px;
+        column-gap: 5px;
+*/
+        gap: 15px 5px;
+        border: 1px dotted red;
+
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .grid {
+          width: 200px;
+        }
+      }
+
+      .csEstilo {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="csEstilo">1</div>
+      <div class="csEstilo">2</div>
+      <div class="csEstilo">3</div>
+      <div class="csEstilo">4</div>
+      <div class="csEstilo">5</div>
+      <div class="csEstilo">6</div>
+    </div>
+  </body>
+</html>

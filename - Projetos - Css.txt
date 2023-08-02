@@ -14,22 +14,92 @@
 			  box-sizing: border-box;
 			}
 
+		display
+		
+			inline
+				não consegue alterar width/height
+				the top and bottom margins/paddings are NOT respected
+			inline-block
+				consegue alterar width/height
+				the top and bottom margins/paddings are respected
+				does NOT add a line-break after the element, so the element can sit next to other
+			block dá uma quebra de linha no final de cada block
+				add a line-break after the element
+			
+			https://www.w3schools.com/css/css_inline-block.asp
+
+
 		flexbox: Flexbox Layout Module
 		
-			Before the Flexbox Layout module, there were four layout modes:
-
-			Block, for sections in a webpage
-			Inline, for text
-			Table, for two-dimensional table data
-			Positioned, for explicit position of an element
-			The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning			
+				!Deals only with individuals columns and rows, for more use Grid System abouve!
 			
-			https://www.w3schools.com/css/css3_flexbox.asp
+				Before the Flexbox Layout module, there were four layout modes:
+
+				Block, for sections in a webpage
+				Inline, for text
+				Table, for two-dimensional table data
+				Positioned, for explicit position of an element
+				The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning			
+				
+				https://www.w3schools.com/css/css3_flexbox.asp
+			
+			justify-content
+				
+				Interage no eixo X (Main) posicionando os elementos aonde desejado. Alinha os itens flex no container de acordo com a direção.
+				
+				center;
+				space-between
+				space-around
+				space-evenly
+				flex-start (default)
+				flex-end
+				
+			align-items
+			
+				Interage no eixo Y (Cross) posicionando os elementos aonde desejado. Alinha os flex itens de acordo com o eixo do container. 
+			
+				stretch (default) fit the container
+				center
+				flex-start
+				flex-end
+				baseline
+				
+				
+						direction    wrap
+			flex-flow: column|row wrap|nowrap;	
+			
+		grid: Grid Layout System
 		
-		justify-content: center;
-			Interage no eixo X (Main) posicionando os elementos aonde desejado
-		align-items: center;	
-			Interage no eixo Y (Cross) posicionando os elementos aonde desejado
+			FR = Fractional unit ( share the space )
+		
+			display: grid | inline-grid;
+			
+			grid-template-columns
+				configura os espaçamentos e a quantidade de colunas, logo linhas ( items / colunas = linhas ) exemplo 3 colunas: grid-template-columns: 3fr 1fr 2fr;
+			
+			grid-template-rows
+				configura os espaçamentos das linhas resultantes dos items / columas = linhas, exemplo 5 items com 3 colunas = 2 linhas grid-template-rows: 2fr 100px;
+			
+			align-items
+				same as in flex
+			justify-items
+				same as in flex				
+			
+				place-items(shortcut): align value justify value;
+					set align-items and justify-items
+					
+			row-gap:
+				gutter between grid rows
+			column-gap:				
+				space between columns
+				
+				gap(shortcut): row-gap column-gap
+				
+			column-gap
+			row-gap
+		
+		    https://css-tricks.com/snippets/css/complete-guide-grid/
+			https://www.w3schools.com/css/css_grid.asp					
 		
 		css Variables:
 		
